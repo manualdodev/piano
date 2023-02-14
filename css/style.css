@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ebebeb;
+}
+
+.piano {
+    background-color: #121212;
+    width: 1000px;
+    height: 400px;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.controls h1 {
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.switcher {
+    width: 50px;
+    height: 25px;
+    background-color: #555;
+    display: flex;
+    border-radius: 50px;
+    padding: 4px;
+}
+
+.switcher__button {
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color: #ddd;
+    border-radius: 25px;
+}
+
+.switcher--active {
+    background-color: #006eff;
+    justify-content: flex-end;
+}
+
+.checkbox__label {
+    display: flex;
+    gap: 15px;
+}
+
+.piano__keys {
+    width: 100%;
+    height: 300px;
+    background-color: #181818;
+    border-radius: 15px;
+    padding: 30px 40px;
+    display: flex;
+}
+
+.white {
+    background-color: white;
+    flex-grow: 1;
+    border-radius: 5px;
+    border-bottom: 8px solid #ddd;
+    color: rgba(0, 0, 0, 0.3);
+    margin-left: -17px;
+    z-index: 1;
+}
+
+.key span {
+    font-weight: 600;
+    position: absolute;
+    transition-duration: 300ms;
+}
+
+.key {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 8px;
+    user-select: none;
+}
+
+.black {
+    width: 40px;
+    background: linear-gradient(black, #333);
+    height: 150px;
+    border-radius: 0 0 5px 5px;
+    border-bottom: 8px solid #222;
+    margin-left: -20px;
+    z-index: 2;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.piano__keys .white:nth-child(1) {
+    margin-left: 0;
+}
+
+.piano__keys .white:nth-child(5) {
+    margin-right: 20px;
+}
+
+.piano__keys .white:nth-child(12) {
+    margin-right: 20px;
+}
+
+.piano__keys .white:nth-child(17) {
+    margin-right: 20px;
+}
+
+.black--pressed {
+    background: linear-gradient(#222, black);
+    border-bottom: none;
+    height: 148px;
+}
+
+.disabled-keys span {
+    opacity: 0;
+}
